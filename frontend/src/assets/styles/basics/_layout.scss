@@ -1,0 +1,48 @@
+.container {
+    max-width: 1500px;
+    padding: 10px;
+}
+
+.about {
+    margin-top: 40px;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1060px 1fr;
+
+    >* {
+        grid-column: 2;
+
+        &.full {
+            grid-column: 1 /-1;
+        }
+    }
+
+    @include for-wide-layout {
+        grid-template-columns:
+            // minmax(20px, 1fr)
+            1fr // minmax(auto, $normal-breakpoint)
+            760px // minmax(20px, 1fr)
+            1fr
+    }
+
+    @include for-normal-layout {
+        grid-template-columns:
+            // minmax(20px, 1fr)
+            1fr // minmax(auto, $narrow-breakpoint)
+            500px // minmax(20px, 1fr)
+            1fr
+    }
+
+    @include for-narrow-layout {
+        grid-template-columns:
+            1fr 360px 1fr // minmax(auto, $mobile-breakpoint)
+    }
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}

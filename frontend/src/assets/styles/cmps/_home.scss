@@ -1,0 +1,169 @@
+.home {
+    // overflow-y:initial !important;
+    padding: 0px;
+    // padding-top: 40px;
+    overflow-x: hidden;
+
+    .main-header {
+        font-size: 6rem;
+    }
+
+    .sub-header {
+        max-width: 100%;
+        font-size: 2rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .text-container {
+        text-align: left;
+    }
+
+    .home-txt {
+        height: calc(100vh);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("~@/assets/Pictures/hero1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 1/-1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        img {
+            width: 40%; // I wish it could be 70%
+
+            @include for-wide-layout {
+                width: 60%
+            }
+
+            @include for-normal-layout {
+                width: 70%;
+            }
+        }
+
+
+
+
+        button {
+            margin: 1rem;
+            border-radius: 15px;
+            padding: 20px 55px;
+            font-weight: bold;
+            background-color: #8ab725;
+            border: 1px solid gray;
+            color: white;
+            outline: none;
+            font-size: large;
+            cursor: pointer;
+        }
+
+        button:hover {
+            animation: jittery 3s infinite;
+        }
+    }
+
+    .article-container {
+        > :not(:last-child) {
+            margin-bottom: 100px;
+        }
+
+        > :last-child {
+            margin-bottom: 50px;
+        }
+
+        > :first-child {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    article {
+        display: flex;
+        justify-content: space-evenly;
+        // justify-content: space-between;
+        align-items: center;
+
+
+        img {
+            width: 600px;
+            height: 300px;
+            border-radius: 3px;
+            object-fit: cover;
+            margin-right: 10px;
+        }
+
+        > :nth-child(2n) {
+            margin-right: 0px;
+            margin-left: 10px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+
+    }
+
+    @include for-wide-layout {
+        article {
+            display: flex;
+            flex-direction: column;
+            margin-right: 0px;
+            margin-left: 0px;
+
+            .text-container {
+                text-align: center;
+            }
+
+            margin-bottom: 50px !important;
+        }
+
+        article:nth-child(2n) {
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+@keyframes jittery {
+
+    5%,
+    50% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(0.95);
+    }
+
+    15% {
+        transform: scale(1.10);
+    }
+
+    20% {
+        transform: scale(1.10) rotate(-4deg);
+    }
+
+    25% {
+        transform: scale(1.10) rotate(4deg);
+    }
+
+    30% {
+        transform: scale(1.10) rotate(-2deg);
+    }
+
+    35% {
+        transform: scale(1.10) rotate(1deg);
+    }
+
+    40% {
+        transform: scale(1.10) rotate(0);
+    }
+}

@@ -1,0 +1,92 @@
+// Font Sizes
+.fs12 {
+    font-size: rem(12px);
+}
+
+.fs14 {
+    font-size: rem(14px);
+}
+
+.fs18 {
+    font-size: rem(18px);
+}
+
+.fs20 {
+    font-size: rem(20px);
+}
+
+.fs24 {
+    font-size: rem(24px);
+}
+
+.fs28 {
+    font-size: rem(28px);
+}
+
+.fs30 {
+    font-size: rem(30px);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.big-plus {
+    // cursor: pointer;
+    transform: rotate(45deg);
+    // font-weight: bolder;
+    // font-size: 1.5rem;
+    line-height: 1.5rem;
+    // align-self: center;
+}
+.el-icon-plus{
+    color:#667388;  
+    font-weight: 700;
+    font-size: rem(14px);
+    margin-right: 4px;
+}
+
+// flex helpers
+
+.flex {
+
+    display: flex;
+
+    >*.full {
+        flex: 1;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.row-reverse {
+        flex-direction: row-reverse;
+    }
+
+    &.justify-center {
+        justify-content: center;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+
+    &.space-between {
+        justify-content: space-between;
+    }
+}
+
+// Media helpers
+
+.square-ratio {
+    @include aspect-ratio(1, 1);
+}
+
+.video-ratio {
+    @include aspect-ratio(16, 9);
+}
+
+.portrait-ratio {
+    @include aspect-ratio(9, 16);
+}

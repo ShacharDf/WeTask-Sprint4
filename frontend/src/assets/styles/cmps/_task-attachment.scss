@@ -1,0 +1,86 @@
+.task-attachment{
+    position: absolute;
+    background-color: #fff;
+    padding: 10px 12px 12px 12px;
+    right: 85px;
+    z-index: 40;
+    top: 307px;
+    border-radius: 4px;
+    box-shadow: 0 0px 5px -2px;
+    input{
+        height: unset; 
+    }
+    .loading-icon{
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        i{
+            vertical-align: middle;
+        }
+    }
+    .attachment-header{
+        h3{
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        margin-bottom: -10px;
+        display: flex;
+        justify-content: center;
+        color: #5e6c84;
+        line-height: 40px;
+        border-bottom: 1px solid rgba(9,30,66,.13);
+        overflow: hidden;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        z-index: 1;
+    }
+    .img-upload-container{
+        #imgUploader{
+            margin-bottom: 0;
+            margin-top: 20px;
+        }
+    }
+}
+
+.img-list{
+    &:hover{
+        background-color: #e2e4e9;;
+        width: 511px;
+        border-radius: 3px;
+    }
+}
+.task-attachment-display{
+    display: flex;
+    margin-bottom: 10px;
+    align-content: center;
+    align-items: center;
+    img{
+        width: 112px;
+        height: 80px;
+        object-fit: cover;
+        margin-right: 12px;
+    }
+    button{
+        color: #5e6c84;
+        font-size: 14px;
+        text-decoration: underline;
+        padding: 0 5px 0 0;
+        &:hover{
+            background-color: transparent;
+            color: #172b4d;
+        }
+    }
+    p{
+        margin-bottom: 0;
+    }
+    p:first-child{
+        font-weight: 700;
+    }
+}
